@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Demex2._0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="600" WindowStartupLocation="CenterScreen">
+        Title="Авторизация" Height="300" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -13,52 +13,50 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Логин" 
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Center"
+        <Label Content="Логин"
                Grid.Column="0"
                Grid.Row="0"
-               FontSize="15"/>
+               FontSize="30"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
 
-        <Label Content="Пароль" 
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Center" 
-               Grid.Row="1"
-               Grid.Column="0"
-               FontSize="15"/>
+        <Label Content="Пароль"
+            Grid.Column="0"
+            Grid.Row="1"
+            FontSize="30"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
 
-        <Button
-            x:Name="sighIn"
-            Grid.Row="3"
-            Content="Авторизация" 
-            Margin="200 50 200 50" 
-            FontWeight="Bold"
-            Grid.ColumnSpan="2" 
-            Background="#FF681AF9" 
-            Click="sighIn_Click"
-            />
         <TextBox x:Name="loginEnter"
-                 Grid.Column="1" 
-                 HorizontalAlignment="Center" 
-                 Margin="20"   
-                 VerticalAlignment="Center" 
-                 Width="200"
-                 Height="40"/>
-        <PasswordBox 
-                 x:Name="passwordEnter"
-                 Grid.Column="1" 
-                 HorizontalAlignment="Center"   
-                 VerticalAlignment="Center" 
-                 Width="200"
-                 Height="40" 
-                 Grid.Row="1"/>
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="30"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center">
+        </TextBox>
 
+        <PasswordBox x:Name="passwordEnter"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     Margin="30"
+                     HorizontalContentAlignment="Left"
+                     VerticalContentAlignment="Center"/>
 
-
+        <Button x:Name="sighIn"
+                Grid.ColumnSpan="2"
+                Grid.Column="0"
+                Grid.Row="3"
+                Content="Авторизация"
+                Height="30"
+                Margin="100 0 100 0" 
+                Click="sighIn_Click"
+                >
+        </Button>
+                        
 
 
 

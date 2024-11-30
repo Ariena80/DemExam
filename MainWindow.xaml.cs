@@ -25,54 +25,57 @@ namespace Demex2._0
             InitializeComponent();
         }
 
-        private int Autorization(string login, string password) {
+        private int Autorization(string login, string password)
+        {
 
             if (login != password)
             {
                 return -1;
+
+           
             }
             switch (login) {
 
                 case "admin":
                     return 1;
                 case "emp":
-                   return 2;
+                    return 2;
                 case "user":
                     return 3;
                 default:
                     return -1;
-                
             }
-
-        
         }
-
 
         private void sighIn_Click(object sender, RoutedEventArgs e)
         {
-           string login = loginEnter.Text;
-           string password = passwordEnter.Password;
-           int role = Autorization(login, password);
+            string login = loginEnter.Text;
+            string password = passwordEnter.Password;
+            int role = Autorization(login, password);
 
-            switch (role) {
+             switch (role) {    
 
                 case 1:
-                    MessageBox.Show("Админ");
+                    AdminOrderWindow adminOrderWindow = new AdminOrderWindow();
+                    adminOrderWindow.Show();
+                    this.Close();
                     break;
                 case 2:
-                    MessageBox.Show("Сотрудник");
+                    EmployeeOrderWindow employeeOrderWindow = new EmployeeOrderWindow();
+                    employeeOrderWindow.Show();
+                    this.Close();
                     break;
                 case 3:
-                    UserOrderWindow userOrderWindow = new UserOrderWindow();
+                    UserOrderWindow userOrderWindow = new UserOrderWindow();   
                     userOrderWindow.Show();
                     this.Close();
                     break;
                 case -1:
-                    MessageBox.Show("Не то, давай занаво", "Ошибка вводка", MessageBoxButton.OK, MessageBoxImage.Error);
-                    break;  
+                    MessageBox.Show("Неправильный логин или пароль", "Ошибка ввода", MessageBoxButton.OK, MessageBoxImage.Error);
+                    break;
             }
-
         }
+       
         
     }
 }

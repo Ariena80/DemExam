@@ -16,23 +16,22 @@ using System.Windows.Shapes;
 namespace Demex2._0
 {
     /// <summary>
-    /// Логика взаимодействия для UserOrderWindow.xaml
+    /// Логика взаимодействия для EmployeeOrderWindow.xaml
     /// </summary>
-    public partial class UserOrderWindow : Window
+    public partial class EmployeeOrderWindow : Window
     {
-
         private string[] models = new Base().models;
         private string[] types = new Base().types;
         private string[] deffects = new Base().deffects;
         private string[] statuses = new Base().statuses;
         private string[] priorityes = new Base().priorityes;
 
-        private List<Order> _orders = new List<Order>();              
-        public UserOrderWindow()
+        private List<Order> _orders = new List<Order>();
+        public EmployeeOrderWindow()
         {
             InitializeComponent();
 
-            for (int i = 0; i < 20; i++) 
+            for (int i = 0; i < 20; i++)
             {
                 Order newOrder = new Order
                 {
@@ -40,21 +39,16 @@ namespace Demex2._0
                     Model = models[i % 4],
                     Type = types[i % 4],
                     Deffect = deffects[i % 4],
-                    Comment = "dkhjfckjsedh",
-                    ClientName = "ufhedukfjh",
+                    Comment = "увауца",
+                    ClientName = "цуацуацуа",
                     Status = statuses[i % 4],
 
                 };
 
                 _orders.Add(newOrder);
-
-
-
             }
-             dataGrid.ItemsSource = _orders;
-
+            dataGrid.ItemsSource = _orders;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

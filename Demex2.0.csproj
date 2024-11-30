@@ -55,9 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminOrderWindow.xaml.cs">
+      <DependentUpon>AdminOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeOrderWindow.xaml.cs">
+      <DependentUpon>EmployeeOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Base.cs" />
+    <Compile Include="Model\Order.cs" />
     <Compile Include="UserOrderWindow.xaml.cs">
       <DependentUpon>UserOrderWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,8 +92,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Base.cs" />
-    <Compile Include="Model\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

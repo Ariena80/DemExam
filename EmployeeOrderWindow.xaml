@@ -1,11 +1,11 @@
-﻿<Window x:Class="Demex2._0.UserOrderWindow"
+﻿<Window x:Class="Demex2._0.EmployeeOrderWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Demex2._0"
         mc:Ignorable="d"
-        Title= "Главаная страница/Полльзователь" Height="450" Width="800">
+        Title="Главная страница/Сотрдуник" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,7 +19,7 @@
                 <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="*"/>
                 <DataGridTextColumn Header="Дефект" Binding="{Binding Deffect}" Width="*"/>
                 <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*"/>
-      
+
 
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>

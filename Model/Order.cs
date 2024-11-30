@@ -13,11 +13,11 @@ namespace Demex2._0.Model
         public string Type { get; set; }
         public string Deffect { get; set; }
         public string Priority { get; set; } = null;
-        public string EmployeeComment { get; set; } = null;
         public string EmployeeName { get; set; }
+        public string ClientName { get; set; }
+        public string EmployeeComment { get; set; } = null;
+        public string Comment { get; set; } = null;
         public string Status { get; set; } = null;
-        public string ClientName { get; set; } = null;
-        public string Comment { get; set; }
 
     }
 }
